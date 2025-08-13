@@ -5,7 +5,9 @@ Repositório com a apostila da mentoria DevOps, organizada para GitHub Pages.
 Para rodar localmente, recomendo usar Jekyll:
 
 ```bash
-bundle exec jekyll serve
+docker run --rm -p 4000:4000 -v $(pwd):/srv/jekyll -w /srv/jekyll ruby:3.1 bash -c "gem install bundler && bundle install && bundle exec jekyll serve --host 0.0.0.0"
+
+
 ```
 
 ## Roteiro de Conteúdo

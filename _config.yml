@@ -3,3 +3,6 @@ description: "Conteúdo completo da mentoria sobre Kubernetes, CI/CD, IaC e mais
 theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
+collections:
+  capítulos:
+    output: true

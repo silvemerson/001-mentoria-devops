@@ -11,7 +11,7 @@ Aqui você encontrará o conteúdo completo dividido em capítulos que abordam d
 
 ## Sumário
 
-- [Capítulo 1 - Fundamentos de DevOps](capítulos/01-fundamentos.md)
+- [Capítulo 1 - Fundamentos de DevOps](capitulos/01-fundamentos.md)
 
 
 ---
