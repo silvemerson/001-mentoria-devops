@@ -6,7 +6,7 @@ Para rodar localmente, recomendo usar Jekyll:
 
 ```bash
 bundle exec jekyll serve
-
+```
 
 ## Roteiro de Conteúdo
 
