@@ -1,31 +1,31 @@
 # Mentoria DevOps - Apostila
 
-Repositório com a apostila da mentoria DevOps, organizada para GitHub Pages.
+Bem-vindo à  Mentoria DevOps!
 
-Para rodar localmente, recomendo usar Jekyll:
-
-```bash
-docker run --rm -p 4000:4000 -v $(pwd):/srv/jekyll -w /srv/jekyll ruby:3.1 bash -c "gem install bundler && bundle install && bundle exec jekyll serve --host 0.0.0.0"
-
-
-```
-
-## Roteiro de Conteúdo
-
-## Sumário
-
-- [1. Fundamentos de DevOps](#1-fundamentos-de-devops)  
-- [2. Terraform para GCP](#2-terraform-para-gcp)  
-- [3. Controle de Versão e Fluxos de Trabalho](#3-controle-de-versão-e-fluxos-de-trabalho)  
-- [4. Docker — Contêineres na Prática](#4-docker--contêineres-na-prática)  
-- [5. Kubernetes — Gerenciamento de Clusters e Objetos](#5-kubernetes--gerenciamento-de-clusters-e-objetos)  
-- [6. Helm Charts — Automação de Deploys no Kubernetes](#6-helm-charts--automação-de-deploys-no-kubernetes)  
-- [7. Pipelines no GitLab CI](#7-pipelines-no-gitlab-ci)  
-- [8. Continuous Delivery com ArgoCD](#8-continuous-delivery-com-argocd)  
-- [9. Observabilidade e Monitoramento](#9-observabilidade-e-monitoramento)  
-- [10. Encerramento e Boas Práticas](#10-encerramento-e-boas-práticas)  
+Aqui você encontrará o conteúdo completo dividido em capítulos que abordam desde fundamentos de DevOps até Kubernetes, CI/CD, Infraestrutura como Código e muito mais.
 
 ---
+
+## Sobre o autor
+
+Sou DevOps Engineer com mais de 9 anos de experiência em ambientes críticos, focado em automação, confiabilidade e eficiência operacional. Atuo na 4Linux como Consultor e Instrutor, ajudando empresas e profissionais a adotarem a cultura DevOps com tecnologias Open Source. Tenho sólida vivência em Linux, Cloud, IaC, CI/CD e sou instrutor de cursos de Containers, Infra Ágil e DevOps, sempre engajado com comunidades e apaixonado por compartilhar conhecimento.
+---
+
+## Contato
+
+Sinta-se à vontade para enviar dúvidas e sugestões!
+
+- Email: araujo.emerson28@gmail.com 
+- GitHub: [https://github.com/silvemerson](https://github.com/silvemerson)  
+
+---
+## Sumário
+
+- [Capítulo 1 - Fundamentos de DevOps](capitulos/01-fundamentos.md)
+
+
+---
+
 
 ## 1. Fundamentos de DevOps
 
