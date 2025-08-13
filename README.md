@@ -8,8 +8,9 @@ Aqui você encontrará o conteúdo completo dividido em capítulos que abordam d
 
 ## Sobre o autor
 
-Sou DevOps Engineer com mais de 9 anos de experiência em ambientes críticos, focado em automação, confiabilidade e eficiência operacional. Atuo na 4Linux como Consultor e Instrutor, ajudando empresas e profissionais a adotarem a cultura DevOps com tecnologias Open Source. Tenho sólida vivência em Linux, Cloud, IaC, CI/CD e sou instrutor de cursos de Containers, Infra Ágil e DevOps, sempre engajado com comunidades e apaixonado por compartilhar conhecimento.
----
+Sou DevOps Engineer com mais de 9 anos de experiência em ambientes críticos, focado em automação, confiabilidade e eficiência operacional. 
+Atuo na 4Linux como Consultor e Instrutor, ajudando empresas e profissionais a adotarem a cultura DevOps com tecnologias Open Source. Tenho sólida vivência em Linux, Cloud, IaC, CI/CD e sou instrutor de cursos de Containers, Infra Ágil e DevOps, sempre engajado com comunidades e apaixonado por compartilhar conhecimento.
+
 
 ## Contato
 
