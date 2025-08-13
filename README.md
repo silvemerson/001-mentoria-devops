@@ -6,15 +6,13 @@ Aqui você encontrará o conteúdo completo dividido em capítulos que abordam d
 
 ---
 
-## Sobre o autor
+## whoami
 
 Sou DevOps Engineer com mais de 9 anos de experiência em ambientes críticos, focado em automação, confiabilidade e eficiência operacional. 
-Atuo na 4Linux como Consultor e Instrutor, ajudando empresas e profissionais a adotarem a cultura DevOps com tecnologias Open Source. Tenho sólida vivência em Linux, Cloud, IaC, CI/CD e sou instrutor de cursos de Containers, Infra Ágil e DevOps, sempre engajado com comunidades e apaixonado por compartilhar conhecimento.
+Atuo como Consultor e Instrutor, ajudando empresas e profissionais a adotarem a cultura DevOps com tecnologias Open Source. Tenho sólida vivência em Linux, Cloud, IaC, CI/CD e sou instrutor de cursos de Containers, Infra Ágil e DevOps, sempre engajado com comunidades e apaixonado por compartilhar conhecimento.
 
 
 ## Contato
-
-Sinta-se à vontade para enviar dúvidas e sugestões!
 
 - Email: araujo.emerson28@gmail.com 
 - GitHub: [https://github.com/silvemerson](https://github.com/silvemerson)  
