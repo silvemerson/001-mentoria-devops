@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Fundamentos de DevOps
 permalink: /capitulos/fundamentos/
 ---
@@ -17,4 +17,4 @@ Neste capítulo vamos abordar os conceitos essenciais que fundamentam a cultura 
 
 ---
 
-Voltar ao [Sumário](../index.md)
+Voltar ao [Sumário](../README.md)
