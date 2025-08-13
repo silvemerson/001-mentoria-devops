@@ -1,0 +1,5 @@
+title: "Mentoria DevOps - Apostila"
+description: "Conteúdo completo da mentoria sobre Kubernetes, CI/CD, IaC e mais."
+theme: minimal-mistakes-jekyll
+plugins:
+  - jekyll-feed
