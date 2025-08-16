@@ -1,6 +1,6 @@
 ---
-layout: Terraform para GCP
-title: Fundamentos de DevOps
+layout: default
+title: Terraform para GCP
 permalink: /capitulos/terraform-gcp/
 ---
 
