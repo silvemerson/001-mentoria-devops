@@ -21,6 +21,7 @@ Atuo como Consultor e Instrutor, ajudando empresas e profissionais a adotarem a 
 ## Sumário
 
 - [Capítulo 1 - Fundamentos de DevOps](capitulos/01-fundamentos.md)
+- [Capítulo 2 - Terraform para GCP](capitulos/02-terraform-gcp.md)
 
 
 ---
