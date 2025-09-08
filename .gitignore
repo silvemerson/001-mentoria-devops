@@ -1,1 +1,5 @@
-*terraform/*
+terraform/tf-import/.terraform*
+terraform/tf-import/.terraform.lock.hcl
+terraform/tf-import/terraform.tfstate
+terraform/tf-import/terraform.tfstate.backup
+terraform/tf-import/.idea/ 
