@@ -1,5 +1,8 @@
-terraform/tf-import/.terraform*
-terraform/tf-import/.terraform.lock.hcl
-terraform/tf-import/terraform.tfstate
-terraform/tf-import/terraform.tfstate.backup
-terraform/tf-import/.idea/ 
+terraform/.terraform/
+*terraform/.tfstate
+terraform/*.tfstate.*
+crash.log
+*terraform/*.tfvars*
+*terraform/.tfvars.json
+terraform/terraform.tfstate.backup
+*terraform/.plan
