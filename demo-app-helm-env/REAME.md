@@ -30,23 +30,23 @@ docker push environment-display:latest
 
 **Desenvolvimento:**
 ```bash
-helm install dev-display ./environment-display -f values-dev.yaml
+helm install dev-display ./chart -f values-dev.yaml
 ```
 
 **Homologação:**
 ```bash
-helm install hmg-display ./environment-display -f values-homolog.yaml
+helm install hmg-display ./chart -f values-homolog.yaml
 ```
 
 **Produção:**
 ```bash
-helm install prod-display ./environment-display -f values-prod.yaml
+helm install prod-display ./chart -f values-prod.yaml
 ```
 
 ### 3. Upgrade de Ambiente
 
 ```bash
-helm upgrade prod-display ./environment-display -f values-prod.yaml
+helm upgrade prod-display ./chart -f values-prod.yaml
 ```
 
 ### 4. Verificar Status
@@ -96,5 +96,5 @@ environment:
 ## Desinstalar
 
 ```bash
-helm uninstall env-display
+helm uninstall nome-release
 ```
