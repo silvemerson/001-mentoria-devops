@@ -1,0 +1,65 @@
+stages:
+  - fmt
+  - validate
+  - plan
+  - apply
+  - destroy
+
+variables:
+  TF_WORKSPACE: prod
+  GOOGLE_APPLICATION_CREDENTIALS: $CI_PROJECT_DIR/gcloud-service-key.json
+
+default:
+  image: 
+    name: silvemerson/terraform-gcp:latest
+    entrypoint: [""]
+
+before_script:
+  - echo "$GCP_CRED" | base64 -d > $GOOGLE_APPLICATION_CREDENTIALS
+  - gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS
+  - gcloud config set project $GCP_PROJECT_ID
+  - terraform init -input=false -reconfigure
+  # - terraform workspace select $TF_WORKSPACE || terraform workspace new $TF_WORKSPACE
+
+fmt:
+  stage: fmt
+  script:
+    - terraform fmt -recursive
+  rules:  
+    - if: '$CI_COMMIT_BRANCH == "main"'
+
+validate:
+  stage: validate
+  script:
+    - terraform validate
+  rules:  
+    - if: '$CI_COMMIT_BRANCH == "main"'
+
+plan:
+  stage: plan
+  script:
+    - terraform plan -input=false -var-file=$TF_WORKSPACE.tfvars -out=tfplan
+  artifacts:
+    paths:
+      - tfplan
+    expire_in: 1h
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+
+apply:
+  stage: apply
+  script:
+    - terraform apply -input=false tfplan
+  dependencies:
+    - plan
+  rules:  
+    - if: '$CI_COMMIT_BRANCH == "main"'
+
+destroy:
+  stage: destroy
+  script:
+    - terraform destroy -input=false -var-file=$TF_WORKSPACE.tfvars -auto-approve
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main" && $DESTROY == "true"'
+  when: manual
+

@@ -1,0 +1,25 @@
+appName: homolog-environment-display
+
+replicaCount: 2
+
+image:
+  repository: environment-display
+  tag: latest
+  pullPolicy: IfNotPresent
+
+environment:
+  name: homolog
+  displayName: "Homolog"
+  class: "homolog"
+
+service:
+  type: ClusterIP
+  port: 80
+
+resources:
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi

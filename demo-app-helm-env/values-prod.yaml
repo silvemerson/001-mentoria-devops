@@ -1,0 +1,25 @@
+appName: prod-environment-display
+
+replicaCount: 3
+
+image:
+  repository: environment-display
+  tag: latest
+  pullPolicy: IfNotPresent
+
+environment:
+  name: prod
+  displayName: "Produção"
+  class: "prod"
+
+service:
+  type: ClusterIP
+  port: 80
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 250m
+    memory: 256Mi

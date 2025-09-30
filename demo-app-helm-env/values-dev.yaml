@@ -1,0 +1,25 @@
+appName: dev-environment-display
+
+replicaCount: 1
+
+image:
+  repository: environment-display
+  tag: latest
+  pullPolicy: IfNotPresent
+
+environment:
+  name: dev
+  displayName: "Dev"
+  class: "dev"
+
+service:
+  type: ClusterIP
+  port: 80
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 50m
+    memory: 64Mi
