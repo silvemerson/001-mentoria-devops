@@ -6,3 +6,9 @@
 *.backup
 .terraform/
 .terraform.lock.hcl
+
+
+#### vagrant
+# Vagrant
+.vagrant/
+*.box
