@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: appvamosla
+  firestore:
+    project-id: ${GOOGLE_CLOUD_PROJECT:test-project}
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    root: INFO
+    com.appvamosla: DEBUG

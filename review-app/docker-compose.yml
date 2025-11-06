@@ -1,0 +1,56 @@
+services:
+  firestore-emulator:
+    image: google/cloud-sdk:emulators
+    container_name: firestore-emulator
+    command: gcloud beta emulators firestore start --host-port=0.0.0.0:8080
+    ports:
+      - "8080:8080"
+    environment:
+      - FIRESTORE_EMULATOR_HOST=0.0.0.0:8080
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - appvamosla-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: appvamosla-backend
+    ports:
+      - "8081:8080"
+    environment:
+      - GOOGLE_CLOUD_PROJECT=test-project
+      - FIRESTORE_EMULATOR_HOST=firestore-emulator:8080
+      - GOOGLE_APPLICATION_CREDENTIALS=/dev/null
+    depends_on:
+      firestore-emulator:
+        condition: service_healthy
+    networks:
+      - appvamosla-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: appvamosla-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_URL=http://appvamosla-backend:8080/api
+    depends_on:
+      - backend
+    networks:
+      - appvamosla-network
+
+networks:
+  appvamosla-network:
+    driver: bridge
