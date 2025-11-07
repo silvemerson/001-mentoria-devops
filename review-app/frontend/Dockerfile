@@ -20,6 +20,6 @@ COPY --from=builder /app/dist ./dist
 
 EXPOSE 3000
 
-ENV NEXT_PUBLIC_API_URL=http://backend:8080
+ENV NEXT_PUBLIC_API_URL=http://backend.review-app.svc.cluster.local:8081
 
 CMD ["serve", "-s", "dist", "-l", "3000"]

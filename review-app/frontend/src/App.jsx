@@ -13,8 +13,8 @@ function App() {
     if (typeof window !== 'undefined') {
       return 'http://localhost:8081/api'
     }
-    // Se tá no servidor, usa o nome do container
-    return 'http://appvamosla-backend:8080/api'
+    // K8s nome do serviço
+    return 'http://backend.review-app.svc.cluster.local:8081/api'
   }
 
   const API_URL = import.meta.env.VITE_API_URL || getAPIUrl()

@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.37.0 (fb0539e64)
+  labels:
+    io.kompose.service: firestore-emulator
+  name: firestore-emulator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: firestore-emulator
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.37.0 (fb0539e64)
+      labels:
+        io.kompose.service: firestore-emulator
+    spec:
+      containers:
+        - args:
+            - gcloud
+            - beta
+            - emulators
+            - firestore
+            - start
+            - --host-port=0.0.0.0:8080
+          env:
+            - name: FIRESTORE_EMULATOR_HOST
+              value: 0.0.0.0:8080
+          image: google/cloud-sdk:emulators
+          livenessProbe:
+            exec:
+              command:
+                - curl
+                - -f
+                - http://localhost:8080
+            failureThreshold: 5
+            periodSeconds: 10
+            timeoutSeconds: 5
+          name: firestore-emulator
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+      restartPolicy: Always

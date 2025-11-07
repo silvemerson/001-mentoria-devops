@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.37.0 (fb0539e64)
+  labels:
+    io.kompose.service: frontend
+  name: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: frontend
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.37.0 (fb0539e64)
+      labels:
+        io.kompose.service: frontend
+    spec:
+      containers:
+        - env:
+            - name: VITE_API_URL
+              value: http://backend.local:8081/api
+          image: silvemerson/review-app-frontend:latest
+          imagePullPolicy: Always
+          name: appvamosla-frontend
+          ports:
+            - containerPort: 3000
+              protocol: TCP
+      restartPolicy: Always
